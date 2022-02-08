@@ -19,11 +19,12 @@ class ResultadoController {
     }
     async delete(req: Request, res: Response) {
         const repository = getRepository(Resultado);
-        const ID = req.body.id
-        const idExists = await repository.findOne({ "id": ID })
-        if (idExists) {
-            await repository.remove(idExists);
-            console.log("Resultado deletado com sucesso! Id: " + ID)// Id do objetivo: " + Res.objetivo_id + " Id do round: " + Res.round_id)
+        const ID = req.body.round_id
+        const ID2 = req.body.objetivo_id
+        const idsExists = await repository.findOne({ "round_id": ID, "objetivo_id": ID2 })
+        if (idsExists) {
+            await repository.remove(idsExists);
+            console.log("Resultado deletado com sucesso! Id do round: " + ID + "; Objetivo do round: " + ID2)// Id do objetivo: " + Res.objetivo_id + " Id do round: " + Res.round_id)
             return res.sendStatus(204); //---> No content
         } else {
             console.log("Resultado não encontrado na tabela!")
