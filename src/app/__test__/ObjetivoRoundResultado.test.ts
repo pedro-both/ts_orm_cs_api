@@ -19,8 +19,7 @@ const partidas = [
     { id:1 , inicio:"2022-01-31" , fim:"2022-01-31" , jogador_nickname: "Pedro" },
     { id:2, inicio:"2022-01-31" , fim:"2022-01-31" , jogador_nickname: "ricardo" },
     { id:3 , inicio: "2022-01-31", fim:"2022-01-31" , jogador_nickname: "cristian" }
-] 
-/* TABELAS DO TRABALHO */
+] /* TABELAS DO TRABALHO */
 const objetivos = [
     { id: 1, descricao:"frenetico" , pontos: 1 },
     { id: 2, descricao: "calmo", pontos: 7},
@@ -32,9 +31,9 @@ const rounds = [
     { id: 6, numero: 10, inicio: "2021-10-18", fim: "2021-10-18", modo: "CONTRATERRORISTA", partida_id:3 }
 ]
 const resultados = [
-    { id: 0, status: "SIM", objetivo_id: 1, round_id: 4 },//id: { objetivo: 1, round: 4 } },
-    { id: 1, status: "NAO", objetivo_id: 2, round_id: 5 },//id: { objetivo: 2, round: 5} },
-    { id: 2, status: "SIM", objetivo_id: 2, round_id: 6 }//id: { objetivo: 2, round: 6} }
+    { status: "SIM", objetivo_id: 3, round_id: 4 },//id: { objetivo: 1, round: 4 } },
+    { status: "NAO", objetivo_id: 2, round_id: 5 },//id: { objetivo: 2, round: 5} },
+    { status: "SIM", objetivo_id: 1, round_id: 6 }//id: { objetivo: 2, round: 6} }
 ]
 
 describe("Testes de persistência", () => {
