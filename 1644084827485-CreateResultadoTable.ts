@@ -1,25 +1,20 @@
 import { MigrationInterface, QueryRunner, Table, TableForeignKey } from "typeorm";
 
-export class CreateResultadoTable1644084827485 implements MigrationInterface {
+export class CreateResultadoTable1639400928376 implements MigrationInterface {
 
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.createTable(new Table({
             name: 'tb_resultado',
             columns: [
                 {
-                    name: 'id',
+                    name: 'objetivo_id',
                     type: 'int',
                     isPrimary: true
                 },
                 {
-                    name: 'objetivo_id',
-                    type: 'int',
-                    isPrimary: false
-                },
-                {
                     name: 'round_id',
                     type: 'int',
-                    isPrimary: false
+                    isPrimary: true
                 },
                 {
                     name: 'status',
